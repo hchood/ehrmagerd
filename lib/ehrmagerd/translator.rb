@@ -1,5 +1,6 @@
 require "ehrmagerd/version"
 require "unirest"
+require "pry"
 
 module Ehrmagerd
   class Translator
