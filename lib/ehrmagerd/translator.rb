@@ -1,5 +1,6 @@
 require "ehrmagerd/version"
 require "unirest"
+require "JSON"
 require "pry"
 
 module Ehrmagerd
@@ -12,6 +13,9 @@ module Ehrmagerd
         parameters: {
           "input" => "[\"OhMyGod\",\"Goosebumps\",\"my favorite books!\"]"
         }
+
+      parsed_response = JSON.parse(response.raw_body)
+      translated_string = JSON.parse(parsed_response["data"]["output"]).first
     end
   end
 end
