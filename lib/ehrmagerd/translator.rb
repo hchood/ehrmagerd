@@ -1,5 +1,7 @@
 require "ehrmagerd/version"
-require "ehrmagerd/translator"
 
 module Ehrmagerd
+  class Translator
+
+  end
 end
