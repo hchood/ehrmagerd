@@ -11,12 +11,11 @@ module Ehrmagerd
           "X-Mashape-Authorization" => Ehrmagerd.api_token
         },
         parameters: {
-          "input" => "[\"OhMyGod\",\"Goosebumps\",\"my favorite books!\"]"
+          "input" => string
         }
 
       parsed_response = JSON.parse(response.raw_body)
-binding.pry
-      translated_string = JSON.parse(parsed_response["data"]["output"]).first
+      translated_string = parsed_response["data"]["output"]
     end
   end
 end
