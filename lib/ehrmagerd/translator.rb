@@ -8,13 +8,14 @@ module Ehrmagerd
     def self.translate(string)
       response = Unirest::post "https://jmillerdesign-ermahgerd-translator.p.mashape.com/api",
         headers: {
-          "X-Mashape-Authorization" => "hm4geMmQl70fwzsJAY9ddGVg9QtReNlj"
+          "X-Mashape-Authorization" => Ehrmagerd.api_token
         },
         parameters: {
           "input" => "[\"OhMyGod\",\"Goosebumps\",\"my favorite books!\"]"
         }
 
       parsed_response = JSON.parse(response.raw_body)
+binding.pry
       translated_string = JSON.parse(parsed_response["data"]["output"]).first
     end
   end
