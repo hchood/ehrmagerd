@@ -1,6 +1,6 @@
 # Ehrmagerd
 
-TODO: Write a gem description
+A simple wrapper for the [ERMAHGERD Translator](http://ermahgerd.jmillerdesign.com/#!/translate) gem.
 
 ## Installation
 
@@ -16,9 +16,20 @@ Or install it yourself as:
 
     $ gem install ehrmagerd
 
+Set up your API key:
+
+1. Sign up for [mashape.com](www.mashape.com) and obtain an API key.
+2. Change the name of the `.env.example` file to `.env`. Insert your own API key as the token.
+3. Run `source .env`.
+
 ## Usage
 
-TODO: Write usage instructions here
+Pass in a string to translate:
+
+```ruby
+Ehrmagerd.translate("I love cats!")
+#=> "I LERV CERTS!"
+```
 
 ## Contributing
 
